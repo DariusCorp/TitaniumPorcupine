@@ -3,6 +3,7 @@ import {Alert, StyleSheet, Text, View} from 'react-native';
 import {ActionBar, AnimatedScanner, Colors, ChipsInput, Card} from "react-native-ui-lib";
 import icon from '../TitaniumPorcupine/assets/icon.png'
 import CardsScreen from "./src/Screens/TestScreen";
+import Test2 from "./src/Screens/Test2";
 
 export default function App() {
     return (
@@ -10,7 +11,8 @@ export default function App() {
             <Text>Hello, Timisoara!</Text>
             <Text>OK</Text>
 
-            <CardsScreen/>
+            <Test2/>
+
 
             <ActionBar
                 centered
