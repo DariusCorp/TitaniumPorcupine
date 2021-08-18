@@ -8,6 +8,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Planner from "./src/Screens/Planner";
 import Generator from "./src/Screens/Generator";
+import Quiz from "./src/Screens/Quiz";
+import FeaturesQuiz from "./src/Screens/FeaturesQuiz";
+
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +21,8 @@ export default function App() {
             <Stack.Navigator screenOptions={{
                 headerShown: false
             }}>
-                <Stack.Screen name="Home" component={Index} />
+                <Stack.Screen name="Home" component={Quiz} />
+                <Stack.Screen name="Index" component={Index} />
                 <Stack.Screen name="CityPass" component={CityPass} />
                 <Stack.Screen name="Planner" component={Planner} />
                 <Stack.Screen name="Generator" component={Generator} />

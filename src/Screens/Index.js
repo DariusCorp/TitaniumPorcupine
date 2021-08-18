@@ -230,7 +230,7 @@ class CarouselScreen extends Component<Props, State, CardsScreenProps, CardsScre
             {image: require("../../assets/Page-1.jpeg"), location: "CityPass"},
             {image: require("../../assets/Page2.jpg"), location: "Planner"},
             {image: require("../../assets/Page3.jpg"), location: "Generator"},
-            {image: require("../../assets/Page4.jpg"), location: "CityPass"},
+            {image: require("../../assets/Page4.jpg"), location: "Quiz"},
         ];
 
 
@@ -359,7 +359,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: 'dodgerblue',
+        backgroundColor: '#FFC20F',
         alignItems: 'center',
         justifyContent: 'center',
     },
