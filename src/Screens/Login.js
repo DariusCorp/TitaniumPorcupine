@@ -9,6 +9,7 @@ import  {
     LayoutAnimation
 } from 'react-native';
 
+
 UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
 
 import {LogoColors, TimisoaraColors} from "../Style/colors";
@@ -60,16 +61,28 @@ class Login extends Component {
         this.fadeAnimation = new Animated.Value(0)
     }
 
+
+
     changeProps = () => {
         if (this.state.buttonProps === labelButton) {
             this.setState({buttonProps: iconButton});
+            setTimeout(
+                function() {
+                    this.props.navigation.navigate("Index");
+                }
+                    .bind(this),
+                800
+            );
+
         }
         if (this.state.buttonProps === iconButton) {
             this.setState({buttonProps: labelButton});
         }
+
     };
 
     componentDidMount() {
+
         Animated.timing(this.fadeAnimation, {
             toValue: 1,
             duration: 10000,
@@ -104,25 +117,25 @@ class Login extends Component {
                     outlineColor={Colors.black}
                     size={Button.sizes.large}
                     onPress={() => Alert.alert('Button #3')}
-                    style={{marginTop: 20, marginLeft: 20, backgroundColor: "#FFF"}}
+                    style={styles.googlebutton}
                 >
-                    <Image source={Google} style={styles.google}/>
+                    <Image source={Google} style={styles.googleicon}/>
 
                 </Button>
                 <Button
                     onPress={() => Alert.alert('Button #3')}
                     size={Button.sizes.large}
-                    style={{marginTop: 20, backgroundColor: LogoColors.Facebook}}
+                    style={styles.facebookbutton}
                 >
-                    <Image source={Facebook} style={styles.facebook}/>
+                    <Image source={Facebook} style={styles.facebookicon}/>
 
                 </Button>
                 <Button
                     size={Button.sizes.large}
                     onPress={() => Alert.alert('Button #3')}
-                    style={{marginTop: 20, marginRight: 20, backgroundColor: "#000"}}
+                    style={styles.applebutton}
                 >
-                    <Image source={Apple} style={styles.apple}/>
+                    <Image source={Apple} style={styles.appleicon}/>
 
                 </Button>
 
@@ -133,7 +146,7 @@ class Login extends Component {
 
                         size={Button.sizes.large}
                         onPress={() => Alert.alert('Button #3')}
-                        style={{marginTop: 20, marginLeft: 35, backgroundColor: TimisoaraColors.MikadoYellow, width: 120, height: 55}}
+                        style={styles.loginbutton}
                     >
                         <Text text60>Login</Text>
 
@@ -141,7 +154,7 @@ class Login extends Component {
                     <Button
                         size={Button.sizes.large}
                         onPress={() => Alert.alert('Button #3')}
-                        style={{marginTop: 20, marginRight: 35, backgroundColor: TimisoaraColors.MikadoYellow, width: 120, height: 55}}
+                        style={styles.singupbutton}
                     >
                         <Text text60>Sign up</Text>
 
@@ -169,24 +182,49 @@ const styles = StyleSheet.create({
        justifyContent: "space-between",
         alignContent: "center"
     },
-    google: {
+    googleicon: {
         width: 20,
         height: 21
     },
-    facebook: {
+    facebookicon: {
         width: 10,
         height: 21
     },
-    apple: {
+    appleicon: {
         width: 17,
         height: 21
+    },
+    googlebutton: {
+        marginTop: 20,
+        marginLeft: 20,
+        backgroundColor: "#FFF"
+    },
+    facebookbutton: {
+        marginTop: 20,
+        backgroundColor: LogoColors.Facebook
+    },
+    applebutton: {
+        marginTop: 20,
+        marginRight: 20,
+        backgroundColor: "#000"
     },
     icon: {
         width: 20,
         height: 20
     },
-    smallbutton: {
-
+    loginbutton: {
+        marginTop: 20,
+        marginLeft: 35,
+        backgroundColor: TimisoaraColors.MikadoYellow,
+        width: 120,
+        height: 55
+    },
+    singupbutton: {
+        marginTop: 20,
+        marginRight: 35,
+        backgroundColor: TimisoaraColors.MikadoYellow,
+        width: 120,
+        height: 55
     }
 
 });
