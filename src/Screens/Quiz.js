@@ -38,7 +38,7 @@ const cards = [
 
 
 
-export default class App extends React.Component {
+export default class Quiz extends React.Component {
 
     constructor(props) {
         super(props);

@@ -92,7 +92,7 @@ type CardsScreenState = {
     selected2: boolean;
 };
 
-class CarouselScreen extends Component<Props, State, CardsScreenProps, CardsScreenState> {
+class Index extends Component<Props, State, CardsScreenProps, CardsScreenState> {
     carousel = React.createRef();
      url = "../../assets/avatar.jpg";
     state = {
@@ -230,7 +230,7 @@ class CarouselScreen extends Component<Props, State, CardsScreenProps, CardsScre
             {image: require("../../assets/Page-1.jpeg"), location: "CityPass"},
             {image: require("../../assets/Page2.jpg"), location: "Planner"},
             {image: require("../../assets/Page3.jpg"), location: "Generator"},
-            {image: require("../../assets/Page4.jpg"), location: "Quiz"},
+            {image: require("../../assets/Page4.jpg"), location: "Login"},
         ];
 
 
@@ -369,4 +369,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default CarouselScreen;
+export default Index;
