@@ -15,6 +15,18 @@ const Title = () => {
 };
 
 
+const SearchingExperience = () => {
+    return (
+        <View
+            style={[styles.card, styles.cardFront]}
+        >
+            <ActivityIndicator color={TimisoaraColors.MikadoYellow} size={100}/>
+            <Text style={styles.activityIndicatorText}>
+                Cautand experiente noi
+            </Text>
+        </View>
+    );
+};
 
 
 const RandomExperienceButton = ({onPress}) => {
@@ -52,7 +64,12 @@ const ExperienceRandomizerScreen = () => {
                 <Title/>
             </View>
             <View style={styles.experiencePreviewContainer}>
-                <ExperienceCard experience={experience}/>
+                {
+                    experience === null ?
+                        <SearchingExperience/>
+                        :
+                        <ExperienceCard experience={experience}/>
+                }
             </View>
             <View style={styles.buttonContainer}>
                 <RandomExperienceButton onPress={onRandomExperienceButtonPress}/>
@@ -77,6 +94,7 @@ const styles = StyleSheet.create({
     experiencePreviewContainer: {
         flex: 3,
         width: '100%',
+        justifyContent: 'center'
     },
     buttonContainer: {
         flex: 1,
@@ -107,7 +125,14 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         color: TimisoaraColors.RaisinBlack
-    }
+    },
+    activityIndicatorText: {
+        color: TimisoaraColors.MikadoYellow,
+        fontSize: 20,
+        alignSelf: 'center',
+        fontWeight: 'bold',
+        padding: 10
+    },
 });
 
 

@@ -4,17 +4,6 @@ import React, {useState} from "react";
 import CardFlip from "react-native-card-flip";
 
 const ExperienceCardFront = ({experience, onPress}) => {
-    if (experience === null)
-        return (
-            <View
-                style={[styles.card, styles.cardFront]}
-            >
-                <ActivityIndicator color={TimisoaraColors.MikadoYellow} size={100}/>
-                <Text style={styles.activityIndicatorText}>
-                    Cautand experiente noi
-                </Text>
-            </View>
-        )
     return (
         <TouchableOpacity
             style={[styles.card, styles.cardFront]}
@@ -101,13 +90,6 @@ const styles = StyleSheet.create({
     cardFront: {},
     cardBack: {
         backgroundColor: TimisoaraColors.MikadoYellow,
-    },
-    activityIndicatorText: {
-        color: TimisoaraColors.MikadoYellow,
-        fontSize: 20,
-        alignSelf: 'center',
-        fontWeight: 'bold',
-        padding: 10
     },
     image: {
         flex: 3,
