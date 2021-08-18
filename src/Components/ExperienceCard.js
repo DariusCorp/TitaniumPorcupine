@@ -1,4 +1,4 @@
-import {ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {TimisoaraColors} from "../Style/colors";
 import React, {useState} from "react";
 import CardFlip from "react-native-card-flip";

@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {ActivityIndicator, Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
+import {ActivityIndicator, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import {TimisoaraColors} from "../Style/colors";
 import {EXPERIENCES} from "../FakeBackend/Experiences";
-import CardFlip from "react-native-card-flip";
 import ExperienceCard from "../Components/ExperienceCard";
 
 
