@@ -1,6 +1,5 @@
-import _ from 'lodash';
 import React from 'react';
-import {Alert, ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 
 import CityPass from "./src/Screens/CityPass";
 import Index from "./src/Screens/Index";
@@ -8,8 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Planner from "./src/Screens/Planner";
 import Generator from "./src/Screens/Generator";
+import DestinationDetail from "./src/Screens/DestinationDetail";
 import Quiz from "./src/Screens/Quiz";
-import FeaturesQuiz from "./src/Screens/FeaturesQuiz";
 import Login from "./src/Screens/Login";
 import ExperienceRandomizerScreen from "./src/Screens/ExperienceRandomizerScreen";
 import {TimisoaraColors} from "./src/Style/colors";
@@ -21,6 +20,12 @@ export default function App() {
     return (
         <NavigationContainer >
             <Stack.Navigator screenOptions={{
+
+            }}>
+                <Stack.Screen name="Home" component={Index}
+                              options={{
+                                  headerShown: false
+                              }}/>
                 headerShown: false
             }}>
                 <Stack.Screen name="Home" component={Quiz} />
@@ -39,8 +44,9 @@ export default function App() {
                 />
                 <Stack.Screen name="Home" component={Index} />
                 <Stack.Screen name="CityPass" component={CityPass} />
-                <Stack.Screen name="Planner" component={Planner} />
-                <Stack.Screen name="Generator" component={Generator} />
+                <Stack.Screen name="Planner" component={Planner}/>
+                <Stack.Screen name="Generator" component={Generator}/>
+                <Stack.Screen name="DestinationDetail" component={DestinationDetail}/>
                 <Stack.Screen name="Login" component={Login} />
             </Stack.Navigator>
         </NavigationContainer>
