@@ -8,6 +8,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Planner from "./src/Screens/Planner";
 import Generator from "./src/Screens/Generator";
+import Quiz from "./src/Screens/Quiz";
+import FeaturesQuiz from "./src/Screens/FeaturesQuiz";
+import Login from "./src/Screens/Login";
 import ExperienceRandomizerScreen from "./src/Screens/ExperienceRandomizerScreen";
 import {TimisoaraColors} from "./src/Style/colors";
 
@@ -20,6 +23,8 @@ export default function App() {
             <Stack.Navigator screenOptions={{
                 headerShown: false
             }}>
+                <Stack.Screen name="Home" component={Quiz} />
+                <Stack.Screen name="Index" component={Index} />
                 <Stack.Screen
                     name="ExperienceGenerator"
                     component={ExperienceRandomizerScreen}
@@ -36,6 +41,7 @@ export default function App() {
                 <Stack.Screen name="CityPass" component={CityPass} />
                 <Stack.Screen name="Planner" component={Planner} />
                 <Stack.Screen name="Generator" component={Generator} />
+                <Stack.Screen name="Login" component={Login} />
             </Stack.Navigator>
         </NavigationContainer>
     );

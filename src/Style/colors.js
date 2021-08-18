@@ -6,3 +6,6 @@ export const TimisoaraColors = {
     White: '#FFFFFF',
     WindsonTan: '#AB4900'
 };
+export const LogoColors ={
+    Facebook: '#4267B2',
+}
