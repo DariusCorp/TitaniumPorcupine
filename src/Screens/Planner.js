@@ -7,6 +7,8 @@ import search from "../../assets/search.png";
 import stars from "../../assets/stars.png";
 import tickets from "../../assets/tickets.png";
 import profile from "../../assets/profile.png";
+import NavigationBar from "../Components/NavigationBar";
+import {TimisoaraColors} from "../Style/colors";
 
 class TouchableOpacityScreen extends Component {
 
@@ -16,14 +18,9 @@ class TouchableOpacityScreen extends Component {
     render() {
 
         return (
-            <View bg-dark80 flex padding-20>
-                <ActionBar
-                    centered
-                    actions={_.map([home, search, stars, tickets, profile], iconSource => ({
-                        iconSource,
-                        iconStyle: {width: 25, height: 25}
-                    }))}
-                />
+            <View style={{flex: 1, backgroundColor: TimisoaraColors.White}}>
+                <View style={{flex: 1}}></View>
+                <NavigationBar/>
             </View>
         );
     }

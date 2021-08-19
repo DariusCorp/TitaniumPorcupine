@@ -3,6 +3,7 @@ import {ActivityIndicator, StyleSheet, Text, TouchableOpacity, View} from "react
 import {TimisoaraColors} from "../Style/colors";
 import {EXPERIENCES} from "../FakeBackend/Experiences";
 import ExperienceCard from "../Components/ExperienceCard";
+import NavigationBar from "../Components/NavigationBar";
 
 
 const Title = () => {
@@ -73,6 +74,7 @@ const ExperienceRandomizerScreen = () => {
             <View style={styles.buttonContainer}>
                 <RandomExperienceButton onPress={onRandomExperienceButtonPress}/>
             </View>
+            <NavigationBar/>
         </View>
     )
 };

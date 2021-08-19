@@ -2,16 +2,15 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 
 import CityPass from "./src/Screens/CityPass";
-import Index from "./src/Screens/Index";
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Planner from "./src/Screens/Planner";
-import Generator from "./src/Screens/Generator";
 import DestinationDetail from "./src/Screens/DestinationDetail";
 import Quiz from "./src/Screens/Quiz";
 import Login from "./src/Screens/Login";
 import ExperienceRandomizerScreen from "./src/Screens/ExperienceRandomizerScreen";
 import {TimisoaraColors} from "./src/Style/colors";
+import MainScreen from "./src/Screens/MainScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,16 +21,13 @@ export default function App() {
             <Stack.Navigator screenOptions={{
 
             }}>
-                <Stack.Screen name="Home" component={Index}
+                <Stack.Screen name="Home" component={MainScreen}
                               options={{
                                   headerShown: false
                               }}/>
-                headerShown: false
-            }}>
-                <Stack.Screen name="Home" component={Quiz} />
-                <Stack.Screen name="Index" component={Index} />
+
                 <Stack.Screen
-                    name="ExperienceGenerator"
+                    name="Generator"
                     component={ExperienceRandomizerScreen}
                     options={{
                         headerShown: true,
@@ -42,12 +38,11 @@ export default function App() {
                         title: 'Timisoara'
                     }}
                 />
-                <Stack.Screen name="Home" component={Index} />
                 <Stack.Screen name="CityPass" component={CityPass} />
                 <Stack.Screen name="Planner" component={Planner}/>
-                <Stack.Screen name="Generator" component={Generator}/>
                 <Stack.Screen name="DestinationDetail" component={DestinationDetail}/>
                 <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="Quiz" component={Quiz} />
             </Stack.Navigator>
         </NavigationContainer>
     );

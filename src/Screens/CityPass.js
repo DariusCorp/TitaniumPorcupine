@@ -19,6 +19,7 @@ import tickets from "../../assets/tickets.png";
 import profile from "../../assets/profile.png";
 import {ActionBar} from "react-native-ui-lib";
 import {ScrollView} from "react-native";
+import NavigationBar from "../Components/NavigationBar";
 
 const OptionItem = ({ bgColor, icon, label, onPress }) => {
     return (
@@ -163,13 +164,7 @@ const Home = ({ navigation }) => {
                     renderItem={({ item, index }) => renderDestinations(item, index)}
                 />
             </View>
-            <ActionBar
-                centered
-                actions={_.map([home, search, stars, tickets, profile], iconSource => ({
-                    iconSource,
-                    iconStyle: {width: 25, height: 25}
-                }))}
-            />
+            <NavigationBar/>
         </View>
     );
 };
