@@ -1,5 +1,5 @@
 import React from "react";
-import {Image, ImageBackground, ScrollView, Text, TouchableOpacity, View} from "react-native";
+import {Image, ImageBackground, Platform, SafeAreaView, ScrollView, Text, TouchableOpacity, View} from "react-native";
 import {TimisoaraColors} from "../Style/colors";
 import {Avatar, Colors} from "react-native-ui-lib";
 import home from '../../assets/home.png';
@@ -13,14 +13,14 @@ import NavigationBar from "../Components/NavigationBar";
 const Card = ({title, image, target, onPress}) => {
     return (
         <TouchableOpacity onPress={onPress}
-            style={{
-                marginHorizontal: 10,
-                marginVertical: 8,
-                height: 250,
-                width: 175,
-                borderRadius: 20,
-                elevation: 6,
-            }}
+                          style={{
+                              marginHorizontal: 10,
+                              marginVertical: 8,
+                              height: 250,
+                              width: 175,
+                              borderRadius: 20,
+                              elevation: 6,
+                          }}
         >
             <Image
                 source={image}
@@ -126,13 +126,13 @@ const MainScreen = ({navigation}) => {
                     flex: 1
                 }}
             >
-                <View
+                <SafeAreaView
                     style={{
                         flexDirection: 'row',
                         alignItems: "center"
                     }}
                 >
-                    <Avatar containerStyle={{marginVertical: 10, marginHorizontal: 15}} {...{
+                    <Avatar containerStyle={{marginVertical: Platform.OS === 'android' ?  40: 0, marginHorizontal: 15}} {...{
                         title: 'Image, badge ("away")',
                         source: {
                             uri:
@@ -140,7 +140,7 @@ const MainScreen = ({navigation}) => {
                         },
                         badgeProps: {size: 'pimpleBig', backgroundColor: Colors.yellow30},
                         badgePosition: 'BOTTOM_RIGHT'
-                    }}/>
+                    }} onPress={() => {navigation.navigate("Profile")}}/>
                     <Text
                         style={{
                             fontSize: 22,
@@ -149,7 +149,7 @@ const MainScreen = ({navigation}) => {
                     >
                         Mircea Hava
                     </Text>
-                </View>
+                </SafeAreaView>
 
                 <ScrollView
                     horizontal={true}
@@ -162,7 +162,7 @@ const MainScreen = ({navigation}) => {
                     showsHorizontalScrollIndicator={false}
                 >
                     <Card title={'City Pass'} image={images.homeBanner} onPress={() => {navigation.navigate("CityPass")}}/>
-                    <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate("Planner")}}/>
+                    <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate("TakeQuiz")}}/>
                     <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}}/>
                     <Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Login")}}/>
                     <Card title={'Timisoara'} image={images.timisoara}  onPress={() => {navigation.navigate("Quiz")}}/>
