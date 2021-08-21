@@ -11,6 +11,8 @@ import Login from "./src/Screens/Login";
 import ExperienceRandomizerScreen from "./src/Screens/ExperienceRandomizerScreen";
 import {TimisoaraColors} from "./src/Style/colors";
 import MainScreen from "./src/Screens/MainScreen";
+import TicketsScreen from "./src/Screens/TicketsScreen";
+import TicketScreen from "./src/Screens/TicketScreen";
 import Profile from "./src/Screens/Profile";
 import TakeQuiz from "./src/Screens/TakeQuiz";
 import Recommendation from "./src/Screens/Recommendation";
@@ -22,10 +24,8 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
     return (
-        <NavigationContainer >
-            <Stack.Navigator screenOptions={{
-
-            }}>
+        <NavigationContainer>
+            <Stack.Navigator screenOptions={{}}>
                 <Stack.Screen name="Home" component={MainScreen}
                               options={{
                                   headerShown: false
@@ -43,9 +43,12 @@ export default function App() {
                         title: 'Timisoara'
                     }}
                 />
-                <Stack.Screen name="CityPass" component={CityPass} />
+                <Stack.Screen name="CityPass" component={CityPass}/>
                 <Stack.Screen name="Planner" component={Planner}/>
                 <Stack.Screen name="DestinationDetail" component={DestinationDetail}/>
+                <Stack.Screen name="Login" component={TicketsScreen}/>
+                <Stack.Screen name="TicketDetails" component={TicketScreen}/>
+                <Stack.Screen name="Quiz" component={Quiz}/>
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Quiz" component={Quiz}
                               options={{
@@ -68,12 +71,11 @@ export default function App() {
             justifyContent: 'center',
             alignment: 'fill',
             width: '100%',
-            height:'100%',
+            height: '100%',
             // useless
             margin: 0
         },
-        title: {
-        },
+        title: {},
         header: {
             flex: 1,
             justifyContent: 'center',
