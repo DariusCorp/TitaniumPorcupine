@@ -11,15 +11,11 @@ import Login from "./src/Screens/Login";
 import ExperienceRandomizerScreen from "./src/Screens/ExperienceRandomizerScreen";
 import {TimisoaraColors} from "./src/Style/colors";
 import MainScreen from "./src/Screens/MainScreen";
-import TicketsScreen from "./src/Screens/TicketsScreen";
 import TicketScreen from "./src/Screens/TicketScreen";
-import Profile from "./src/Screens/Profile";
-import TakeQuiz from "./src/Screens/TakeQuiz";
-import Recommendation from "./src/Screens/Recommendation";
-
 
 
 import Ticket from "./src/Screens/Ticket";
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -47,12 +43,10 @@ export default function App() {
                 <Stack.Screen name="CityPass" component={CityPass}/>
                 <Stack.Screen name="Planner" component={Planner}/>
                 <Stack.Screen name="DestinationDetail" component={DestinationDetail}/>
-                <Stack.Screen name="Login" component={TicketsScreen}/>
                 <Stack.Screen name="TicketDetails" component={TicketScreen}/>
                 <Stack.Screen name="Quiz" component={Quiz}/>
-                <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Quiz" component={Quiz} />
-                <Stack.Screen name="Ticket" component={Ticket} />
+                <Stack.Screen name="Login" component={Login}/>
+                <Stack.Screen name="Ticket" component={Ticket}/>
             </Stack.Navigator>
         </NavigationContainer>
     );
