@@ -13,6 +13,8 @@ import {TimisoaraColors} from "./src/Style/colors";
 import MainScreen from "./src/Screens/MainScreen";
 import Profile from "./src/Screens/Profile";
 import TakeQuiz from "./src/Screens/TakeQuiz";
+import Recommendation from "./src/Screens/Recommendation";
+
 
 
 const Stack = createNativeStackNavigator();
@@ -51,6 +53,7 @@ export default function App() {
                               }}
                 />
                 <Stack.Screen name="Profile" component={Profile} />
+                <Stack.Screen name="Recommendation" component={Recommendation} />
                 <Stack.Screen name="TakeQuiz" component={TakeQuiz}
                               options={{
                                   headerShown: false

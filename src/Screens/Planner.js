@@ -73,7 +73,7 @@ const Planner = ({navigation}) => {
         return (
             <View style={{flex: 1, backgroundColor: TimisoaraColors.White}}>
             <ScrollView style={{flex: 1, backgroundColor: TimisoaraColors.White}}>
-                <CardTrip image={Recommendation}  onPress={() => {navigation.navigate("Planner")}} title={"Our recommendation for you"} details={"Check this recommendation that we specially made to suit your needs and desires."} renderCheck={1}/>
+                <CardTrip image={Recommendation}  onPress={() => {navigation.navigate("Recommendation")}} title={"Our recommendation for you"} details={"Check this recommendation that we specially made to suit your needs and desires."} renderCheck={1}/>
                 <CardTrip image={Adventure} onPress={() => {navigation.navigate("Planner")}} title={"For the adventurer"} details={"Try these breathtaking experiences and adrenaline filled activities for the venturesome that you are."} renderCheck={global.answersg[2]}/>
                 <CardTrip image={Sightseeing} onPress={() => {navigation.navigate("Planner")}} title={"Next Level Sightseeing"} details={"Take sightseeing to another level with the best buildings and views in the city."} renderCheck={global.answersg[1]}/>
                 <CardTrip image={Culinary} onPress={() => {navigation.navigate("Planner")}} title={"Culinary masterclass"} details={"Find you inner gourmand with this magnificent culinary tour of Timisoara."} renderCheck={global.answersg[3]}/>
