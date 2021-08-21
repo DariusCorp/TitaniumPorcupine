@@ -11,8 +11,6 @@ import profile from "../../assets/profile.png";
 class TouchableOpacityScreen extends Component {
 
 
-
-
     render() {
 
         return (
