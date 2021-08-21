@@ -19,6 +19,7 @@ import Recommendation from "./src/Screens/Recommendation";
 
 
 
+import Ticket from "./src/Screens/Ticket";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -50,17 +51,8 @@ export default function App() {
                 <Stack.Screen name="TicketDetails" component={TicketScreen}/>
                 <Stack.Screen name="Quiz" component={Quiz}/>
                 <Stack.Screen name="Login" component={Login} />
-                <Stack.Screen name="Quiz" component={Quiz}
-                              options={{
-                                  headerShown: false
-                              }}
-                />
-                <Stack.Screen name="Profile" component={Profile} />
-                <Stack.Screen name="Recommendation" component={Recommendation} />
-                <Stack.Screen name="TakeQuiz" component={TakeQuiz}
-                              options={{
-                                  headerShown: false
-                              }}/>
+                <Stack.Screen name="Quiz" component={Quiz} />
+                <Stack.Screen name="Ticket" component={Ticket} />
             </Stack.Navigator>
         </NavigationContainer>
     );

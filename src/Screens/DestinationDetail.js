@@ -8,6 +8,7 @@ import {
     TouchableOpacity
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import NavigationBar from "../Components/NavigationBar";
 
 import { images, icons, COLORS, FONTS, SIZES } from '../../constants';
 
@@ -196,7 +197,7 @@ const DestinationDetail = ({ navigation }) => {
 
                     <IconLabel
                         icon={icons.train}
-                        label="Parking"
+                        label="Any mean of transport"
                     />
 
                     <IconLabel
@@ -230,7 +231,7 @@ const DestinationDetail = ({ navigation }) => {
 
                         <TouchableOpacity
                             style={{ width: 130, height: '80%', marginHorizontal: SIZES.radius }}
-                            onPress={() => { console.log("Booking on pressed") }}
+                            onPress={() => {  navigation.navigate("Ticket")}}
                         >
                             <LinearGradient
                                 style={[{ flex: 1, alignItems: 'center', justifyContent: 'center', borderRadius: 10 }]}
