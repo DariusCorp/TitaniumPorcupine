@@ -2,6 +2,7 @@ import React from "react";
 import {Image, ScrollView, Text, View} from "react-native";
 import NavigationBar from "../Components/NavigationBar";
 import {TimisoaraColors} from "../Style/colors";
+import MapView, {Marker} from 'react-native-maps';
 
 
 const TicketScreen = ({navigation, route}) => {
@@ -71,15 +72,32 @@ const TicketScreen = ({navigation, route}) => {
                             fontSize: 18,
                             paddingVertical: 10,
                             borderBottomColor: TimisoaraColors.MikadoYellow,
-                            borderBottomWidth: 1
+                            borderBottomWidth: 1,
+                            marginVertical: 20
                         }}
                     >
                         {
                             ticket.details
                         }
                     </Text>
+                    <MapView
+                        initialRegion={{
+                            latitude: 45.7548188,
+                            longitude: 21.1959887,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421,
+                        }}
+                        style={{
+                            height: 300,
+                        }}
+                    >
+                        <Marker
+                            coordinate={{latitude: 45.7548188, longitude: 21.1959887}}
+                            title={'Museu'}
+                            description={'Descriere muzeu'}
+                        />
+                    </MapView>
                 </View>
-
             </ScrollView>
             <NavigationBar/>
         </View>
