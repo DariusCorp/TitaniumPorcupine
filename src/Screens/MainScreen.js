@@ -164,7 +164,7 @@ const MainScreen = ({navigation}) => {
                     <Card title={'City Pass'} image={images.homeBanner} onPress={() => {navigation.navigate("CityPass")}}/>
                     <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate("TakeQuiz")}}/>
                     <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}}/>
-                    <Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Login")}}/>
+                    <Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Tickets")}}/>
                     <Card title={'Timisoara'} image={images.timisoara}  onPress={() => {navigation.navigate("Quiz")}}/>
                 </ScrollView>
 
