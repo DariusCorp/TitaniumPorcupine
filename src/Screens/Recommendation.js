@@ -3,10 +3,6 @@ import {TouchableHighlight, TouchableOpacity, View, StyleSheet, Text, Animated} 
 import {Recommendations} from "../FakeBackend/Recommendations";
 import {SwipeListView} from 'react-native-swipe-list-view';
 
-const state = {
-    animation: new Animated.Value(60),
-    textanimation: new Animated.Value(0),
-}
 
 const Recommendation = () => {
     const [listData, setListData] = useState(
@@ -34,7 +30,7 @@ const Recommendation = () => {
     }
 
 
-    const onPress = () => {
+    const onPress = (state) => {
         let target = 0;
         let target_text = 0;
        // console.log("state.animation")
@@ -65,6 +61,12 @@ const Recommendation = () => {
 
 
     const VisibleItem = props => {
+
+        const state = {
+            animation: new Animated.Value(60),
+            textanimation: new Animated.Value(0),
+        }
+
         const animatedStyle = {
             height : state.animation,
             borderRadius: 5,
@@ -75,7 +77,7 @@ const Recommendation = () => {
         return(
             <Animated.View style={[styles.rowFront, animatedStyle]}>
             <TouchableOpacity
-            style={styles.rowFrontVisible} onPress={onPress}
+            style={styles.rowFrontVisible} onPress={() => onPress(state)}
             >
                 <View>
                     <Text style={styles.title} numberOfLines={1}>{data.item.title}</Text>
