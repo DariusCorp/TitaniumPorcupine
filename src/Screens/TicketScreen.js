@@ -28,8 +28,10 @@ const TicketScreen = ({navigation, route}) => {
                     style={{
                         borderWidth: 3,
                         borderColor: TimisoaraColors.MikadoYellow,
+                        backgroundColor: TimisoaraColors.White,
                         borderRadius: 20,
-                        padding: 10
+                        padding: 10,
+                        elevation: 8
                     }}
                 >
                     <Image
@@ -88,7 +90,7 @@ const TicketScreen = ({navigation, route}) => {
                             longitudeDelta: 0.0421,
                         }}
                         style={{
-                            height: 300,
+                            height: 300
                         }}
                     >
                         <Marker
