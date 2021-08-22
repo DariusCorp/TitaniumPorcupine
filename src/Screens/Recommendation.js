@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import {TouchableHighlight, TouchableOpacity, View, StyleSheet, Text, Animated} from "react-native";
+import {TouchableHighlight, TouchableOpacity, View, StyleSheet, Text, Animated, Button} from "react-native";
 import {Recommendations} from "../FakeBackend/Recommendations";
 import {SwipeListView} from 'react-native-swipe-list-view';
+import {TimisoaraColors} from "../Style/colors";
 
 
-const Recommendation = () => {
+const Recommendation = ({navigation}) => {
     const [listData, setListData] = useState(
         Recommendations.map((RecommendationsItem, index) => ({
             key: `${index}`,
@@ -101,7 +102,9 @@ const Recommendation = () => {
 
         return(
             <View style={styles.rowBack}>
-                <Text>Left</Text>
+                <TouchableOpacity onPress={() => navigation.navigate("Ticket")}>
+                    <Text>Booking</Text>
+                </TouchableOpacity>
                 <TouchableOpacity style={[styles.backRightBtn, styles.backRightBtnLeft]} onPress={onClose}>
                     <Text>Close</Text>
                 </TouchableOpacity>
@@ -166,7 +169,7 @@ const styles = StyleSheet.create({
     },
     rowBack: {
         alignItems: 'center',
-        backgroundColor: '#DDD',
+        backgroundColor: TimisoaraColors.MikadoYellow,
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',

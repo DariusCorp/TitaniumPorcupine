@@ -6,70 +6,50 @@ import NavigationBar from "../Components/NavigationBar";
 
 const TICKETS = [
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'City Pass 1 Day',
+        details: 'Timisoara City Pass gives you the freedom to do what you want, when you want, whilst making incredible savings: our passes include bucket list attractions, top tours, and plenty of hidden gems, all handpicked by our local experts. ',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de autobuz',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Muzeul satului Banatean',
+        details: "Muzeul Satului Bănățean din Timișoara este singurul muzeu cu profil etnografic din România care cuprinde centrul civic al satului, format din Primărie, Biserică, Școală, Casă Națională (cu destinație culturală) și birt, în care se desfășoară majoritatea activităților cultural-educative și științifice ale unei localități. ",
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de tren',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Muzeul de Arta Timisoara',
+        details: "Muzeul de Artă din Timișoara este un muzeu de artă aflat în Palatul Baroc din Timișoara. Muzeul a luat ființă după desprinderea secțiunii de artă a Muzeului Banatului, care a funcționat o perioadă într-o aripă din actuala clădire. Muzeul a devenit instituție de sine stătătoare pe 1 ianuarie 2006, director fiind profesorul universitar Marcel Tolcea. O dată cu finalizarea unei bune părți din lucrările de restaurare a palatului și a spațiului expozițional, muzeul extins a putut fi inaugurat la 21 decembrie.",
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'City Pass 1 Day',
+        details: 'Timisoara City Pass gives you the freedom to do what you want, when you want, whilst making incredible savings: our passes include bucket list attractions, top tours, and plenty of hidden gems, all handpicked by our local experts. ',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de autobuz',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de autobuz',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de autobuz',
         image: require('../../assets/tickets.png')
     },
     {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
+        title: 'Bilet de autobuz',
         image: require('../../assets/tickets.png')
     },
-    {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-        image: require('../../assets/tickets.png')
-    },
-    {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-        image: require('../../assets/tickets.png')
-    },
-    {
-        title: 'Muzeu',
-        details: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.',
-        image: require('../../assets/tickets.png')
-    },
+
 ];
 
 

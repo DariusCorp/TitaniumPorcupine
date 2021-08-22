@@ -14,6 +14,9 @@ export const Family = require("../assets/Family.jpg");
 export const Friends = require("../assets/Friends.jpg");
 export const Alone = require("../assets/Alone.jpg");
 export const Sightseeing = require("../assets/Sightseeing.jpg");
+export const flight = require("../assets/Flight.png");
+export const buzias = require("../assets/Buzias.jpg");
+export const nfc = require("../assets/NFC.jpg");
 export default {
     homeBanner,
     muzeu,
@@ -21,6 +24,8 @@ export default {
     transport,
     day,
     timisoara,
-    avatar
-
+    avatar,
+    flight,
+    buzias,
+    nfc
 }
