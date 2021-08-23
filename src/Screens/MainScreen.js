@@ -67,7 +67,7 @@ const Card = ({title, image, target, onPress}) => {
 }
 
 
-const Card2 = ({image}) => {
+const Card2 = ({image, text}) => {
     return (
         <View
             style={{
@@ -87,7 +87,7 @@ const Card2 = ({image}) => {
                     padding: 20
                 }}
             >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                {text}
             </Text>
             <View
                 style={{
@@ -161,7 +161,7 @@ const MainScreen = ({navigation}) => {
                     }}
                     showsHorizontalScrollIndicator={false}
                 >
-                    <Card title={'City Pass'} image={images.homeBanner} onPress={() => {navigation.navigate("CityPass")}}/>
+                    <Card title={'City Pass'} image={images.homeBanner }  onPress={() => {navigation.navigate("CityPass")}}/>
                     <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate("TakeQuiz")}}/>
                     <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}}/>
                     <Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Tickets")}}/>
@@ -172,11 +172,12 @@ const MainScreen = ({navigation}) => {
                     style={{
                     }}
                 >
-                    <Card2 image={images.day}/>
-                    <Card2 image={images.sat}/>
-                    <Card2 image={images.homeBanner}/>
-                    <Card2 image={images.transport}/>
-                    <Card2 image={images.timisoara}/>
+                    <Card2 image={images.day} text={"Get your one day pass in-app in order to get all of the perks that our great city has to offer you. First 100 passes are 20% OFF!"}/>
+                    <Card2 image={images.nfc} text={"Prima aplicatie integrata care include posibilitatea sa uiti de biletele de transport traditionale. Cumpara biletul electronic prin intermediul aplicatiei"}/>
+                    <Card2 image={images.sat} text={"Muzeul Satului Bănățean din Timișoara este singurul muzeu cu profil etnografic din România care cuprinde centrul civic al satului."}/>
+                    <Card2 image={images.flight} text={"Vacanța ta de vara aceasta poartă numele Flight Festival și se întâmplă la Aerodromul Cioca din Timișoara."}/>
+                    <Card2 image={images.buzias} text={"Pe langa oras poti descorperi atractii minunate pentru a iti petrece timpul. We'll give you a hint: Parcul Buzias, Charlottenburg "}/>
+
 
                 </ScrollView>
             </ScrollView>
