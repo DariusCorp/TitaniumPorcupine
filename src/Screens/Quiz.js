@@ -7,6 +7,7 @@ import SwipeCards from 'react-native-swipe-cards';
 
 
 global.answersg = [];
+global.completed = 0;
 
 
 class Card extends React.Component {
@@ -94,7 +95,8 @@ export default class Quiz extends React.Component {
         if (this.state.cards.length - index - 1 === 0) {
             //console.log(this.state.answers);
             global.answersg = this.state.answers;
-            this.props.navigation.navigate("Planner");
+            global.completed = 1;
+            this.props.navigation.replace("Planner");
         }
 
     }

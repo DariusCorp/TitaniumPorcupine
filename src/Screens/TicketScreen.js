@@ -101,7 +101,7 @@ const TicketScreen = ({navigation, route}) => {
                     </MapView>
                 </View>
             </ScrollView>
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     )
 };

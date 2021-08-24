@@ -10,7 +10,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient';
 import NavigationBar from "../Components/NavigationBar";
 
-import { images, icons, COLORS, FONTS, SIZES } from '../../constants';
+import { images, icons, COLORS, SIZES } from '../../constants';
 
 const StarReview = ({ rate }) => {
     let starComponents = [];
@@ -66,7 +66,7 @@ const StarReview = ({ rate }) => {
     return (
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             {starComponents}
-            <Text style={{ marginLeft: SIZES.base, color: COLORS.gray, ...FONTS.body3 }}>{rate}</Text>
+            <Text style={{ marginLeft: SIZES.base, color: COLORS.gray }}>{rate}</Text>
         </View>
     )
 }
@@ -82,7 +82,7 @@ const IconLabel = ({ icon, label }) => {
                     height: 50,
                 }}
             />
-            <Text style={{ marginTop: SIZES.padding, color: COLORS.gray, ...FONTS.h3 }}>{label}</Text>
+            <Text style={{ marginTop: SIZES.padding, color: COLORS.gray}}>{label}</Text>
         </View>
     )
 }
@@ -128,8 +128,8 @@ const DestinationDetail = ({ navigation }) => {
                         </View>
 
                         <View style={{ marginHorizontal: SIZES.radius, justifyContent: 'space-around' }}>
-                            <Text style={{ ...FONTS.h3 }}>Transportation ticket</Text>
-                            <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>STPT</Text>
+                            <Text >Transportation ticket</Text>
+                            <Text style={{ color: COLORS.gray }}>STPT</Text>
 
                             <StarReview
                                 rate={4.5}
@@ -138,7 +138,7 @@ const DestinationDetail = ({ navigation }) => {
                     </View>
 
                     <View style={{ marginTop: SIZES.radius }}>
-                        <Text style={{ color: COLORS.gray, ...FONTS.body3 }}>
+                        <Text style={{ color: COLORS.gray }}>
                             Buy a transportation ticket that you can use for any line.
                         </Text>
                     </View>
@@ -208,8 +208,8 @@ const DestinationDetail = ({ navigation }) => {
 
                 {/* About */}
                 <View style={{ marginTop: SIZES.padding, paddingHorizontal: SIZES.padding }}>
-                    <Text style={{ ...FONTS.h2 }}>About</Text>
-                    <Text style={{ marginTop: SIZES.radius, color: COLORS.gray, ...FONTS.body3 }}>
+                    <Text >About</Text>
+                    <Text style={{ marginTop: SIZES.radius, color: COLORS.gray}}>
                         1865: Work begins on the tram line.
                         At the beginning of 1868, the Timisoara Railway Tram Company was inaugurated, which became the Timișoara Transport Company;
                     </Text>
@@ -226,7 +226,7 @@ const DestinationDetail = ({ navigation }) => {
                 >
                     <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center' }}>
                         <View style={{ flex: 1, marginHorizontal: SIZES.padding, justifyContent: 'center' }}>
-                            <Text style={{ ...FONTS.h1 }}>7 lei</Text>
+                            <Text  >7 lei</Text>
                         </View>
 
                         <TouchableOpacity
@@ -239,7 +239,7 @@ const DestinationDetail = ({ navigation }) => {
                                 start={{ x: 0, y: 0 }}
                                 end={{ x: 1, y: 0 }}
                             >
-                                <Text style={{ color: COLORS.white, ...FONTS.h2 }}>BOOKING</Text>
+                                <Text style={{ color: COLORS.white }}>BOOKING</Text>
                             </LinearGradient>
                         </TouchableOpacity>
                     </View>

@@ -1,5 +1,5 @@
-import React from "react";
-import {Image, ImageBackground, Platform, SafeAreaView, ScrollView, Text, TouchableOpacity, View} from "react-native";
+import React, {useEffect, useState} from "react";
+import {Image, ImageBackground, Platform, SafeAreaView, ScrollView, Text, TouchableOpacity, View, Animated} from "react-native";
 import {TimisoaraColors} from "../Style/colors";
 import {Avatar, Colors} from "react-native-ui-lib";
 import home from '../../assets/home.png';
@@ -10,7 +10,8 @@ import NavigationBar from "../Components/NavigationBar";
 
 
 
-const Card = ({title, image, target, onPress}) => {
+const Card = ({title, image, target, onPress, naviagtion, onPress2}) => {
+
     return (
         <TouchableOpacity onPress={onPress}
                           style={{
@@ -66,21 +67,45 @@ const Card = ({title, image, target, onPress}) => {
     )
 }
 
+const onPress = (state) => {
+    let shower = 120;
+    if(state.shower.__getValue() - 120 === 0){
+        shower = 250
+
+    }else{
+        shower = 120
+
+    }
+
+    Animated.timing(state.shower, {
+        toValue: shower,
+        duration: 1000,
+        useNativeDriver: false
+    }).start()
+
+
+}
+
+
 
 const Card2 = ({image, text}) => {
+    const state= {
+        shower: new Animated.Value(120)
+    }
     return (
-        <View
+        <Animated.View
             style={{
                 alignSelf: "center",
                 width: '90%',
-                height: 120,
+                height: state.shower,
                 marginVertical: 10,
                 borderRadius: 30,
                 backgroundColor: TimisoaraColors.MikadoYellow,
                 elevation: 8,
-                flexDirection: 'row'
-            }}
+
+            } }
         >
+            <TouchableOpacity style={{flex: 1,  flexDirection: 'row'}} onPress={() => onPress(state)}>
             <Text
                 style={{
                     flex: 1,
@@ -104,8 +129,9 @@ const Card2 = ({image, text}) => {
                     }}
                 />
             </View>
+            </TouchableOpacity>
 
-        </View>
+        </Animated.View>
     )
 }
 
@@ -113,6 +139,14 @@ const Card2 = ({image, text}) => {
 
 
 const MainScreen = ({navigation}) => {
+
+    React.useEffect(() => {
+        const unsubscribe = navigation.addListener('focus', () => {
+            console.log('Refreshed!');
+
+        });
+        return unsubscribe;
+    }, [navigation]);
 
     return (
         <View
@@ -147,7 +181,7 @@ const MainScreen = ({navigation}) => {
                             fontWeight: 'bold'
                         }}
                     >
-                        Mircea Hava
+                        Mircea Popescu
                     </Text>
                 </SafeAreaView>
 
@@ -161,11 +195,12 @@ const MainScreen = ({navigation}) => {
                     }}
                     showsHorizontalScrollIndicator={false}
                 >
-                    <Card title={'City Pass'} image={images.homeBanner }  onPress={() => {navigation.navigate("CityPass")}}/>
-                    <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate("TakeQuiz")}}/>
-                    <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}}/>
-                    <Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Tickets")}}/>
-                    <Card title={'Timisoara'} image={images.timisoara}  onPress={() => {navigation.navigate("Quiz")}}/>
+                    <Card title={'City Pass'} image={images.homeBanner }  onPress={() => {navigation.navigate("CityPass")}} naviagtion={navigation}/>
+                    <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate(global.completed ? "Planner" : "TakeQuiz")}} naviagtion={navigation} onPress2={() => {navigation.navigate("Planner")}}/>
+
+                    <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}} naviagtion={navigation}/>
+                    {/*<Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Tickets")}}/>
+                    <Card title={'Timisoara'} image={images.timisoara}  onPress={() => {navigation.navigate("Quiz")}}/>*/}
                 </ScrollView>
 
                 <ScrollView
@@ -181,7 +216,7 @@ const MainScreen = ({navigation}) => {
 
                 </ScrollView>
             </ScrollView>
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     );
 };

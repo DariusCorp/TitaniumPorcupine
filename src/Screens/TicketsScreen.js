@@ -158,7 +158,7 @@ const TicketsScreen = ({navigation}) => {
                     )
                 }
             </ScrollView>
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     )
 };

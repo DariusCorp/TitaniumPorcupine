@@ -18,6 +18,8 @@ import Recommendation from "./src/Screens/Recommendation";
 import TakeQuiz from "./src/Screens/TakeQuiz";
 import TicketsScreen from "./src/Screens/TicketsScreen";
 import Ticket from "./src/Screens/Ticket";
+import Profile from "./src/Screens/Profile";
+import Search from "./src/Screens/Search";
 
 const Stack = createNativeStackNavigator();
 
@@ -47,12 +49,20 @@ export default function App() {
                 <Stack.Screen name="Planner" component={Planner}/>
                 <Stack.Screen name="DestinationDetail" component={DestinationDetail}/>
                 <Stack.Screen name="TicketDetails" component={TicketScreen}/>
-                <Stack.Screen name="Quiz" component={Quiz}/>
+                <Stack.Screen name="Quiz" component={Quiz}
+                              options={{
+                                  headerShown: false
+                              }}/>
                 <Stack.Screen name="Login" component={Login}/>
                 <Stack.Screen name="Tickets" component={TicketsScreen}/>
                 <Stack.Screen name="Recommendation" component={Recommendation}/>
-                <Stack.Screen name="TakeQuiz" component={TakeQuiz}/>
+                <Stack.Screen name="TakeQuiz" component={TakeQuiz}
+                              options={{
+                                  headerShown: false
+                              }}/>
                 <Stack.Screen name="Ticket" component={Ticket}/>
+                <Stack.Screen name="Profile" component={Profile}/>
+                <Stack.Screen name="Search" component={Search}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -5,9 +5,9 @@ import home from "../../assets/home.png";
 import search from "../../assets/search.png";
 import tickets from "../../assets/tickets.png";
 
-const NavigationItem = ({name, icon, target}) => {
+const NavigationItem = ({name, icon, target, navigation}) => {
     return (
-        <TouchableOpacity
+        <TouchableOpacity onPress={() => navigation.navigate(target)}
             style={{
                 flex: 1,
                 alignItems: "center",
@@ -36,7 +36,7 @@ const NavigationItem = ({name, icon, target}) => {
 };
 
 
-const NavigationMenu = () => {
+const NavigationMenu = ({navigation}) => {
     return (
         <View
             style={{
@@ -47,9 +47,9 @@ const NavigationMenu = () => {
                 borderTopColor: TimisoaraColors.DirtyWhite,
             }}
         >
-            <NavigationItem name={'Home'} icon={home}/>
-            <NavigationItem name={'Search'} icon={search}/>
-            <NavigationItem name={'Tickets'} icon={tickets}/>
+            <NavigationItem name={'Home'} target={'Home'} navigation={navigation} icon={home}/>
+            <NavigationItem name={'Search'} icon={search} navigation={navigation} target={'Search'}/>
+            <NavigationItem name={'Tickets'} target={'Tickets'} navigation={navigation} icon={tickets}/>
         </View>
     );
 };

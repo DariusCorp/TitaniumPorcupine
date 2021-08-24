@@ -94,7 +94,7 @@ const Profile = ({navigation}) => {
                 <ButtonProfile title={"Settings"} image={settingIcon} onPress={() => navigation.navigate("Login")}/>
             </View>
 
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     );
 

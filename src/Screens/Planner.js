@@ -83,7 +83,7 @@ const Planner = ({navigation}) => {
 
 
             </ScrollView>
-                <NavigationBar/>
+                <NavigationBar navigation={navigation}/>
             </View>
         );
 

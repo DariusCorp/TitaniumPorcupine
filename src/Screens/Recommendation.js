@@ -34,10 +34,10 @@ const Recommendation = ({navigation}) => {
     const onPress = (state) => {
         let target = 0;
         let target_text = 0;
-       // console.log("state.animation")
+        // console.log("state.animation")
         console.log(state.animation - 40)
         if(state.animation.__getValue() - 60 === 0){
-           target = 250
+            target = 250
             target_text=1
 
             console.log(target + " 1")
@@ -129,6 +129,7 @@ const Recommendation = ({navigation}) => {
 
 
     return (
+
         <View style={styles.container}>
             <SwipeListView
                 data={listData}

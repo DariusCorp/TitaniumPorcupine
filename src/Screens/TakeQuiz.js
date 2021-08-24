@@ -58,7 +58,7 @@ const TakeQuiz = ({navigation}) => {
 
         return (
             <View style={{flex: 1, backgroundColor: TimisoaraColors.MikadoYellow, justifyContent: "center", alignItems: "center"}}>
-                <CardQuiz onPress={() => navigation.navigate("Quiz")}/>
+                <CardQuiz onPress={() => navigation.replace("Quiz")}/>
             </View>
         );
 }

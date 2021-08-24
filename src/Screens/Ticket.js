@@ -28,7 +28,7 @@ const SearchingExperience = () => {
     );
 };
 
-const Ticket = () => {
+const Ticket = ({navigation}) => {
     const [experience, setExperience] = useState(null);
 
     const onInit = () => {
@@ -56,7 +56,7 @@ const Ticket = () => {
                 }
             </View>
 
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     )
 };

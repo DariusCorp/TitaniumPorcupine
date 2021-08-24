@@ -164,7 +164,7 @@ const Home = ({ navigation }) => {
                     renderItem={({ item, index }) => renderDestinations(item, index)}
                 />
             </View>
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     );
 };

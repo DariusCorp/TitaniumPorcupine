@@ -45,7 +45,7 @@ const RandomExperienceButton = ({onPress}) => {
 };
 
 
-const ExperienceRandomizerScreen = () => {
+const ExperienceRandomizerScreen = ({navigation}) => {
     const [experience, setExperience] = useState(null);
 
     const onRandomExperienceButtonPress = () => {
@@ -74,7 +74,7 @@ const ExperienceRandomizerScreen = () => {
             <View style={styles.buttonContainer}>
                 <RandomExperienceButton onPress={onRandomExperienceButtonPress}/>
             </View>
-            <NavigationBar/>
+            <NavigationBar navigation={navigation}/>
         </View>
     )
 };
