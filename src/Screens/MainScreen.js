@@ -207,7 +207,7 @@ const MainScreen = ({navigation}) => {
                     style={{
                     }}
                 >
-                    <Card2 image={images.day} text={"Get your one day pass in-app in order to get all of the perks that our great city has to offer you. First 100 passes are 20% OFF!"}/>
+                    <Card2 image={images.day} text={"Get your one day pass in-app in order to get all of the perks that our great city has to offer you. First 100 passes are 20% OFF! Do not miss out on this ooportunity and come visit our marvelous city"}/>
                     <Card2 image={images.nfc} text={"Prima aplicatie integrata care include posibilitatea sa uiti de biletele de transport traditionale. Cumpara biletul electronic prin intermediul aplicatiei"}/>
                     <Card2 image={images.sat} text={"Muzeul Satului Bănățean din Timișoara este singurul muzeu cu profil etnografic din România care cuprinde centrul civic al satului."}/>
                     <Card2 image={images.flight} text={"Vacanța ta de vara aceasta poartă numele Flight Festival și se întâmplă la Aerodromul Cioca din Timișoara."}/>

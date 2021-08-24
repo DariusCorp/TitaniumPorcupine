@@ -47,8 +47,8 @@ const CardQuiz = ({onPress}) => {
 
                     }}
                 />
-                <Text style={{fontSize: 40, marginTop: 50}}>TAKE QUIZ !</Text>
-                <Text style={{fontSize: 15, marginTop: 15 }}>And let us prepare you your best trip still!</Text>
+                <Text style={{fontSize: 40, marginTop: 50 , textAlign:"center" }}>TAKE QUIZ !</Text>
+                <Text style={{fontSize: 15, marginTop: 15, textAlign:"center" }}>And let us prepare you your best trip still!</Text>
             </View>
         </TouchableOpacity>
     );
