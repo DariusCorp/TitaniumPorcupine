@@ -198,7 +198,7 @@ const MainScreen = ({navigation}) => {
                     <Card title={'City Pass'} image={images.homeBanner }  onPress={() => {navigation.navigate("CityPass")}} naviagtion={navigation}/>
                     <Card title={'Trip Planner'} image={images.muzeu}  onPress={() => {navigation.navigate(global.completed ? "Planner" : "TakeQuiz")}} naviagtion={navigation} onPress2={() => {navigation.navigate("Planner")}}/>
 
-                    <Card title={'Experiences'} image={images.sat}  onPress={() => {navigation.navigate("Generator")}} naviagtion={navigation}/>
+                    <Card title={'Experiences'} image={images.avatar}  onPress={() => {navigation.navigate("Generator")}} naviagtion={navigation}/>
                     {/*<Card title={'Flight Festival'} image={images.transport}  onPress={() => {navigation.navigate("Tickets")}}/>
                     <Card title={'Timisoara'} image={images.timisoara}  onPress={() => {navigation.navigate("Quiz")}}/>*/}
                 </ScrollView>
